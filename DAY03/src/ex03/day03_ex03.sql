@@ -19,5 +19,5 @@ WITH female As (
          SELECT * FROM male EXCEPT ALL SELECT * from female
      )
 SELECT name pizzeria_name
-FROM femaleOnly UNION SELECT name FROM maleOnly
+FROM femaleOnly UNION ALL SELECT name FROM maleOnly
 ORDER BY pizzeria_name;
