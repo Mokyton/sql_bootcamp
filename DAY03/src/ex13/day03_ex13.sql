@@ -5,4 +5,4 @@ WHERE menu_id = (SELECT id from menu WHERE pizza_name = 'greek pizza')
 
 DELETE
 FROM menu
-WHERE pizza_name = 'greek pizza'
+WHERE pizza_name = 'greek pizza';
