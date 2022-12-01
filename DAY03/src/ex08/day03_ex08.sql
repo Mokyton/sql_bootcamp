@@ -1,2 +1,4 @@
 INSERT INTO menu (id, pizzeria_id, pizza_name, price)
-VALUES ((SELECT max(id) + 1 FROM menu), 2, 'sicilian pizza', 900);
+VALUES ((SELECT max(id) + 1 FROM menu), (SELECT id
+                                         FROM pizzeria
+                                         WHERE name = 'Dominos'), 'sicilian pizza', 900);
