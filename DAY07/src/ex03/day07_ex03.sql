@@ -13,4 +13,4 @@ WITH order_ AS (
          GROUP BY p2.name
          ORDER BY action_type ASC, count DESC
      )
-SELECT order_.name, (order_.count + visit_.count) total_count FROM order_ JOIN visit_ ON order_.name = visit_.name
+SELECT order_.name, (order_.count + visit_.count) total_count FROM order_ JOIN visit_ ON order_.name = visit_.name;
