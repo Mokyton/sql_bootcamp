@@ -1,3 +1,16 @@
+drop trigger trg_person_update_audit on person;
+drop trigger trg_person_delete_audit on person;
+drop trigger trg_person_insert_audit on person;
+
+drop function fnc_trg_person_update_audit();
+drop function fnc_trg_person_insert_audit();
+drop function fnc_trg_person_delete_audit();
+
+
+
+
+
+
 CREATE OR REPLACE FUNCTION fnc_trg_person_audit() RETURNS TRIGGER AS $trg_person_audit$
     BEGIN
         IF (TG_OP = 'DELETE') THEN
